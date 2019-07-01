@@ -1,6 +1,6 @@
-package com.tree.bootroad.aop;
+package com.tree.bootroad.x002aop;
 
-import com.tree.bootroad.aop.annotation.LogCost;
+import com.tree.bootroad.x002aop.annotation.LogCost;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-@Aspect
+//@Aspect
 @Slf4j
-@Component
+//@Component
 public class LogAspectWithAnnotation {
 
     @Around("@annotation(logCost)")

@@ -1,4 +1,4 @@
-package com.tree.bootroad.aop;
+package com.tree.bootroad.x002aop;
 
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
@@ -9,13 +9,12 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.servlet.support.RequestContextUtils;
 
 import javax.servlet.http.HttpServletRequest;
 
-@Aspect
+//@Aspect
 @Slf4j
-@Component
+//@Component
 public class LogAspectExecution {
 
     /** ________________________________________________________________________________

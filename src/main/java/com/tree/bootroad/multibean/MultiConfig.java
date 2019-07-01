@@ -12,7 +12,7 @@ public class MultiConfig {
     }
 
     @Bean
-    public Service0 service0(){
+    public Service0 service2(){
         return new Service0();
     }
 

@@ -1,6 +1,5 @@
 package com.tree.bootroad.controller;
 
-import com.tree.bootroad.aop.annotation.LogCost;
 import com.tree.bootroad.cache.GuavaCache;
 import com.tree.bootroad.cache.SpringCache;
 import com.tree.bootroad.model.User;
@@ -24,7 +23,6 @@ public class UserController {
     private SpringCache springCache;
 
     @GetMapping("{id}")
-    @LogCost("get")
     public User get(@PathVariable("id") Integer id){
         log.info("get, id: {}", id);
         User user = springCache.getById(id);
