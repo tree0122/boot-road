@@ -20,6 +20,8 @@ public class BootRoadApplicationTests {
         entityService.save("tree");
         System.out.println("-----------------------------------");
         entityService.get("cui");
+        System.out.println("-----------------------------------");
+        entityService.log("give");
     }
 
 }

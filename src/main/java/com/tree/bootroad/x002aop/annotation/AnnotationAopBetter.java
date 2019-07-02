@@ -13,22 +13,18 @@ import java.lang.reflect.Method;
 @Slf4j
 @Aspect
 @Component
-public class AnnotationAop {
+public class AnnotationAopBetter {
 
-    @Pointcut(value = "@annotation(logCost)", argNames = "logCost")
-    public void pointcut(LogCost logCost){}
-
-
-    @Around(value = "pointcut(logCost)", argNames = "joinPoint,logCost")
-    public Object around(ProceedingJoinPoint joinPoint, LogCost logCost){
+    @Around("@annotation(LogCost)")
+    public Object around(ProceedingJoinPoint joinPoint){
         Method method = ((MethodSignature) joinPoint.getSignature()).getMethod();
-        log.info("============AnnotationAop#Around, first enter,method: {}", method.getName());
+        log.info("============AnnotationAopBetter#Around, first enter,method: {}", method.getName());
         try {
             return joinPoint.proceed();
         } catch (Throwable e) {
             throw new RuntimeException("");
         }finally {
-            log.info("============AnnotationAop#Around, second enter,method: {}", method.getName());
+            log.info("============AnnotationAopBetter#Around, second enter,method: {}", method.getName());
         }
     }
 }
