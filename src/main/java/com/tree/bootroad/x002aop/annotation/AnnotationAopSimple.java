@@ -19,8 +19,15 @@ public class AnnotationAopSimple {
     public void pointcut(){}
 
 
-    @Around("pointcut()")
-    public Object around(ProceedingJoinPoint joinPoint){
+    /**
+     * 环绕通知, 带被代理方法的参数
+     *
+     * @param joinPoint
+     * @param user
+     * @return
+     */
+    @Around("pointcut() && args(user)")
+    public Object around(ProceedingJoinPoint joinPoint, String user){
         Method method = ((MethodSignature) joinPoint.getSignature()).getMethod();
         log.info("============AnnotationAopSimple#Around, first enter,method: {}", method.getName());
         try {
