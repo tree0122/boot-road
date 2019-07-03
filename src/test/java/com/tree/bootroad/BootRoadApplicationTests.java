@@ -1,6 +1,7 @@
 package com.tree.bootroad;
 
 import com.tree.bootroad.x002aop.service.EntityService;
+import com.tree.bootroad.x003bean.multi.ServiceList;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,6 +16,9 @@ public class BootRoadApplicationTests {
     @Resource
     private EntityService entityService;
 
+    @Resource
+    private ServiceList serviceList;
+
     @Test
     public void aop1() {
         entityService.save("tree");
@@ -22,6 +26,11 @@ public class BootRoadApplicationTests {
         entityService.get("cui");
         System.out.println("-----------------------------------");
         entityService.log("give");
+    }
+
+    @Test
+    public void multiBean(){
+        serviceList.printSize();
     }
 
 }
