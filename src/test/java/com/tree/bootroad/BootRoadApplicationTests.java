@@ -3,6 +3,7 @@ package com.tree.bootroad;
 import com.tree.bootroad.x002aop.service.EntityService;
 import com.tree.bootroad.x003bean.multi.ServiceList;
 import com.tree.bootroad.x004event.ContentEvent;
+import com.tree.bootroad.x005guavaeventbus.GuavaEventBus;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -42,5 +43,14 @@ public class BootRoadApplicationTests {
     public void event(){
         applicationContext.publishEvent(new ContentEvent("sth update"));
     }
+
+    @Resource
+    private GuavaEventBus guavaEventBus;
+
+    @Test
+    public void eventBus(){
+        guavaEventBus.biz();
+    }
+
 }
 
