@@ -6,7 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -17,8 +18,12 @@ import java.io.IOException;
 @Configuration
 public class InterceptorConfig {
 
-    public static class InterceptorConfig extends WebMvcConfigurerAdapter{
-
+    @Configuration
+    public static class InterceptorConf implements WebMvcConfigurer {
+        @Override
+        public void addInterceptors(InterceptorRegistry registry) {
+            registry.addInterceptor(new LogInterceptor()).addPathPatterns("/**");
+        }
     }
 
     @Bean
@@ -61,7 +66,8 @@ public class InterceptorConfig {
         public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
             long start = System.currentTimeMillis();
             filterChain.doFilter(servletRequest, servletResponse);
-            log.info("filter, time cost: {}", System.currentTimeMillis() - start);
+            HttpServletRequest request = (HttpServletRequest) servletRequest;
+            log.info("filter, url: {}, time cost: {}", request.getRequestURL(), System.currentTimeMillis() - start);
         }
 
         @Override
