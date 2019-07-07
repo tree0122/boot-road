@@ -3,3 +3,10 @@ spring:
     name:@project.artifactId@
 server:
   port: 7070
+
+# custom starter
+example:
+  service:
+    enabled: true
+    prefix: ===
+    suffix: ~~~
