@@ -5,7 +5,7 @@ spring:
     url: jdbc:mysql://10.0.1.138:3306/tree
     username: tree
     password: tree
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     properties:
       hibernate:
