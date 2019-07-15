@@ -1,6 +1,19 @@
 spring:
   application:
     name:@project.artifactId@
+  datasource:
+    url: jdbc:mysql://10.0.1.138:3306/tree
+    username: tree
+    password: tree
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: true
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+
 server:
   port: 7070
 
@@ -10,3 +23,14 @@ example:
     enabled: true
     prefix: ===
     suffix: ~~~
+com:
+  tree:
+    title: tree0122
+    desc: test and try
+logging:
+  level:
+    org:
+      springframework:
+        web: info
+      hibernate: debug
+
