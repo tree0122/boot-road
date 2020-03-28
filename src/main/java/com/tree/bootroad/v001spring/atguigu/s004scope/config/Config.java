@@ -2,10 +2,7 @@ package com.tree.bootroad.v001spring.atguigu.s004scope.config;
 
 import com.tree.bootroad.v001spring.atguigu.s004scope.bean.Person;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 
 @Configuration
@@ -23,5 +20,16 @@ public class Config {
     public Person person(){
         System.out.println("==========person construct");
         return new Person(18, "zhangsan");
+    }
+
+    /**
+     * @Lazy: 懒加载, 容器启动时不创建对象, 首次使用时创建
+     * @return
+     */
+    @Lazy
+    @Bean
+    public Person person2(){
+        System.out.println("==========person2 construct");
+        return new Person(18, "lisi");
     }
 }
