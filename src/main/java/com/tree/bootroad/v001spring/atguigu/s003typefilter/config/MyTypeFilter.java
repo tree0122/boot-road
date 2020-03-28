@@ -9,8 +9,18 @@ import org.springframework.core.type.filter.TypeFilter;
 
 import java.io.IOException;
 
+/**
+ * 自定义的扫描规则
+ */
 @Slf4j
 public class MyTypeFilter implements TypeFilter {
+    /**
+     *
+     * @param metadataReader: 当前正在扫描的类的信息
+     * @param metadataReaderFactory: 可以获取到其他任何类的信息
+     * @return
+     * @throws IOException
+     */
     @Override
     public boolean match(MetadataReader metadataReader, MetadataReaderFactory metadataReaderFactory) throws IOException {
         AnnotationMetadata annotation = metadataReader.getAnnotationMetadata();
