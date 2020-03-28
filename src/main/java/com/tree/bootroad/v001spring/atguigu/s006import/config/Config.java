@@ -13,7 +13,7 @@ import org.springframework.context.annotation.*;
  */
 @Import({Color.class, Red.class})
 @Configuration
-@ComponentScan(value = "com.tree.bootroad.v001spring.atguigu.s005conditional")
+@ComponentScan(value = "com.tree.bootroad.v001spring.atguigu.s006import")
 public class Config {
 
     /**
