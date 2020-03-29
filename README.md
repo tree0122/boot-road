@@ -116,7 +116,14 @@ note: @PropertySource读取外部配置文件(不读取yml)
             - 正常: 前置 -> 目标方法 -> 后置 -> 返回        
             - 异常: 前置 -> 目标方法 -> 后置 -> 异常        
 
-### 声明式事务
+### [声明式事务](./src/main/java/com/tree/bootroad/v001spring/atguigu/s015tx/README.md)
+
+使用步骤:
+1. 导入相关依赖(数据源, 数据库驱动, spring-jdbc)
+1. 配置数据源, JdbcTemplate
+1. 给方法上标注@Transactional, 表示此方法是一个事务方法
+1. @EnableTransactionManagement: 开启基于注解的事务
+1. 配置事务管理器 PlatformTransactionManager
 ***
 
 ## 扩展原理
