@@ -1,6 +1,5 @@
 package com.tree.bootroad;
 
-import com.tree.bootroad.x002aop.service.EntityService;
 import com.tree.bootroad.x003bean.multi.ServiceList;
 import com.tree.bootroad.x004event.ContentEvent;
 import com.tree.bootroad.x005guavaeventbus.GuavaEventBus;
@@ -18,9 +17,6 @@ import javax.annotation.Resource;
 public class BootRoadApplicationTests {
 
     @Resource
-    private EntityService entityService;
-
-    @Resource
     private ServiceList serviceList;
 
     @Resource
@@ -31,11 +27,7 @@ public class BootRoadApplicationTests {
 
     @Test
     public void aop1() {
-        entityService.save("tree");
-        System.out.println("-----------------------------------");
-        entityService.get("cui");
-        System.out.println("-----------------------------------");
-        entityService.log("give");
+
     }
 
     @Test
