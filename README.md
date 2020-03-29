@@ -152,7 +152,7 @@ note: @PropertySource读取外部配置文件(不读取yml)
 1. 发布事件 context.publishEvent() 
 
 着重: ApplicationContext实例化过程中顺序如下
-1. BeanDefinitionRegistryPostProcessor.postProcessBeanDefinitionRegistry(): 所有bean定义加载后, 可以添加额外bean定义
+1. BeanDefinitionRegistryPostProcessor.postProcessBeanDefinitionRegistry(): 所有bean定义加载后, 可加额外bean定义
 1. BeanFactoryPostProcessor.postProcessBeanFactory(): 所有bean定义加载后, bean实例前, 可优先实例业务bean
 1. BeanPostProcessor: bean的初始化过程中执行
 1. SmartInitializingSingleton.afterSingletonsInstantiated(): 所有bean初始化完成后执行, 可对bean再次进行调整
