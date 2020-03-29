@@ -8,7 +8,7 @@
 ### 组件添加
 1. @ComponentScan + @Component: 自己的类
     1. @Component
-    1. @Reposity 
+    1. @Repository 
     1. @Service 
     1. @Controller
 1. @Configuration + @Bean: 第三方包里的组件
