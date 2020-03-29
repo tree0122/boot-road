@@ -139,7 +139,25 @@ note: @PropertySource读取外部配置文件(不读取yml)
 1. postProcessBeanDefinitionRegistry(): 有bean定义将被加载, bean未创建
 1. 先于BeanFactoryPostProcessor执行: 利用这个, 再给容器额外添加一下组件定义
 
-### ApplicationListener
+### [ApplicationListener](./src/main/java/com/tree/bootroad/v001spring/atguigu/s017applicationlistener/README.md)
+监听容器中分布的事件, 事件驱动模型开发:
+
+步骤:
+1. 注册一个监听器(ApplicationListener)监听某事件(ApplicationEvent)
+    - ApplicationListener的bean: 实现接口
+    - @EventListener: 任何bean方法的添加注解
+1. 只要容器中有相关事件发布, 就能监听到这事件
+    - ContextRefreshedEvent: 容器刷新完成事件
+    - ContextClosedEvent: 容器关闭事件
+1. 发布事件 context.publishEvent() 
+
+着重: ApplicationContext实例化过程中顺序如下
+1. BeanDefinitionRegistryPostProcessor.postProcessBeanDefinitionRegistry(): 所有bean定义加载后, 可以添加额外bean定义
+1. BeanFactoryPostProcessor.postProcessBeanFactory(): 所有bean定义加载后, bean实例前, 可优先实例业务bean
+1. BeanPostProcessor: bean的初始化过程中执行
+1. SmartInitializingSingleton.afterSingletonsInstantiated(): 所有bean初始化完成后执行, 可对bean再次进行调整
+
+
 ### Spring容器创建过程
 ***
 
