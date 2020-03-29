@@ -97,6 +97,25 @@ note: @PropertySource读取外部配置文件(不读取yml)
 1. 在切面组件的每个通知方法上, 标注通知注解, 告诉Spring何时何地运行(切点表达式)
 1. 开启基于注解的AOP模式
 
+原理总结:
+1. @EnableAspectJAutoProxy: 开启AOP功能
+1. @EnableAspectJAutoProxy给容器注册组件AnnotationAwareAspectJAutoProxyCreator
+1. AnnotationAwareAspectJAutoProxyCreator是一个后置处理器(BeanPostProcessor)
+1. 容器的创建过程
+    1. Context.registerBeanPostProcessors(): 注册所有后置处理器(包括AnnotationAwareAspectJAutoProxyCreator)
+    1. Context.finishBeanFactoryInitialization(): 注册剩下的单实例bean
+        1. 创建业务逻辑组件和切面组件
+        1. AnnotationAwareAspectJAutoProxyCreator在bean初始化时拦截
+        1. 拦截时, 判断组件是否需要增强(切面通知方法, 包装成Advisor, 给业务组件创建代理对象)
+1. 执行目标方法
+    1. 代理对象执行目标方法
+    1. CglibAopProxy.intercept():
+        1. 获取目标方法的拦截器链(MethodInterceptor)
+        1. 利用拦截器的链式机制, 依次进入每个拦截器执行
+        1. 效果
+            - 正常: 前置 -> 目标方法 -> 后置 -> 返回        
+            - 异常: 前置 -> 目标方法 -> 后置 -> 异常        
+
 ### 声明式事务
 ***
 
