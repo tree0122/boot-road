@@ -127,6 +127,7 @@ note: @PropertySource读取外部配置文件(不读取yml)
 ***
 
 ## 扩展原理
+
 ### BeanFactoryPostProcessor
 ### BeanDefinitionRegistryPostProcessor
 ### ApplicationListener
