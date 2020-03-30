@@ -4,7 +4,6 @@ import com.tree.bootroad.v001spring.atguigu.s016beanfactorypostprocessor.bean.Bl
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 /**
@@ -13,7 +12,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * BeanFactoryPostProcessor: BeanFactory后置处理器
  *      时机: 在BeanFactory标准初始化后调用, 所有bean定义保存到BeanFactory, 但是bean实例未创建
  */
-@EnableTransactionManagement
 @Configuration
 @ComponentScan(value = "com.tree.bootroad.v001spring.atguigu.s016beanfactorypostprocessor")
 public class Config {
