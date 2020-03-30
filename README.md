@@ -153,7 +153,22 @@ SpringContext.refresh(): 容器创建并刷新
     - @EventListener: 注解
     - 派发器
 
+
 ## web
-### servlet3.0
+
+### [servlet3.0](./src/main/java/com/tree/bootroad/v001spring/atguigu/s019servlet/README.md)
+1. 注册servlet: 
+    - @WebServlet: 注解HttpServlet的子类
+    - ServletContext.addServlet()
+    - ServletRegistrationBean: SpringBoot
+1. 注册filter
+    - @WebFilter: 注解Filter的子类
+    - ServletContext.addFilter()
+    - FilterRegistrationBean: SpringBoot
+1. 注册listener
+    - @WebListener: 注解ServletContextListener的子类
+    - ServletContext.addListener()
+    - ServletListenerRegistrationBean: SpringBoot
+    
 ### 异步请求
 
