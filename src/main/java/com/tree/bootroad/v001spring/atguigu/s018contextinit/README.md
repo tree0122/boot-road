@@ -49,11 +49,11 @@ SpringContext.refresh(): 容器创建并刷新
 
 1. registerBeanPostProcessors(): 注册BeanPostProcessor(bean初始化前后执行)
     - BeanPostProcessor的不同类型: 在bean创建中的执行时机不一样
-        - BeanPostProcessor: bean初始化前后
-        - DestructionAwareBeanPostProcessor: bean销毁之前
+        - MergedBeanDefinitionPostProcessor:  bean定义之后, 实例化之前, 最后机会处理bean定义
         - InstantiationAwareBeanPostProcessor: bean实例化前后都执行, 先于bean属性赋值
         - SmartInstantiationAwareBeanPostProcessor: 同上, 增加对bean的判断
-        - MergedBeanDefinitionPostProcessor:  bean定义之后
+        - BeanPostProcessor: bean初始化前后
+        - DestructionAwareBeanPostProcessor: bean销毁之前
     - PostProcessorRegistrationDelegate.registerBeanPostProcessors()
     - beanFactory.addBeanPostProcessor(BeanPostProcessorChecker): 这个处理器检查其他处理器
     - 注册所有BeanPostProcessor
