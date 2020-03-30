@@ -99,4 +99,23 @@ SpringContext.refresh(): 容器创建并刷新
     - publishEvent(): 发布容器刷新事件
     - LiveBeansView.registerApplicationContext()
 
-1. resetCommonCaches(): 重置一下缓存资源                
+1. resetCommonCaches(): 重置一下缓存资源    
+
+总结:
+1. Spring容器启动的时候, 先保存所有注册进来的Bean的定义信息
+    - xml注册bean
+    - 注解注册bean: @Bean @Service    
+1. Spring容器会在合适的时机创建这些Bean
+    - 用到bean的时候: getBean()创建并保存Bean
+    - 统一创建剩下的单实例bean: finishBeanFactoryInitialization()
+1. BeanPostProcessor 后置处理器
+    - 每个bean创建过程中, 都会用到各种BeanPostProcessor, 增加bean的功能
+    - AutowiredAnnotationBeanPostProcessor: 处理自动注入
+    - AnnotationAwareAspectJAutoProxyCreator: 给bean创建代理对象(AOP)
+    - AsyncAnnotationBeanPostProcessor: 支持异步注解
+    - ScheduledAnnotationBeanPostProcessor: 支持调度功能
+    - 其他后置处理器...
+1. Spring容器的事件驱动
+    - ApplicationListener: 接口
+    - @EventListener: 注解
+    - 派发器
