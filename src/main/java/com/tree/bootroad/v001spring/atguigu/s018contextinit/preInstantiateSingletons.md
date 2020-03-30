@@ -67,6 +67,7 @@
     - autowireByName() 或者 autowireByType(): 找到注入的bean
     - InstantiationAwareBeanPostProcessor.postProcessProperties()
     - InstantiationAwareBeanPostProcessor.postProcessPropertyValues()
+    - applyPropertyValues(): 正式赋值操作
 1. initializeBean(): 初始化bean  
     - invokeAwareMethods(): BeanFactoryAware相关接口
         - BeanNameAware
