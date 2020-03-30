@@ -40,6 +40,15 @@
 1. getObjectForBeanInstance(): 返回真正的bean(即使FactoryBean 首次创建也原样返回)    
     
 #### createBean()详解: 返回bean实例
+1. resolveBeforeInstantiation(): 在bean创造之前, 给BeanPostProcessor执行的机会
+    - applyBeanPostProcessorsBeforeInstantiation(): 
+        - 找到所有 InstantiationAwareBeanPostProcessor 组件
+        - InstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation
+        - 直到返回不为null
+    - applyBeanPostProcessorsAfterInitialization(): 上面不为null, 则执行
+        - 找到所有 BeanPostProcessor 组件
+        - 所有 BeanPostProcessor.postProcessAfterInitialization()
+    - 上步不为null, 直接返回bean
 1. 具体执行的是 doCreateBean()
 1. factoryBeanInstanceCache.remove(beanName): 删除factoryBean缓存         
 1. createBeanInstance(): 反射生成bean 
