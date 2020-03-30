@@ -117,8 +117,22 @@
 1. SmartInitializingSingleton.afterSingletonsInstantiated(): 所有bean初始化完成后执行, 可对bean再次进行调整
 
 
-### Spring容器创建过程
+### [Spring容器创建过程](./src/main/java/com/tree/bootroad/v001spring/atguigu/s018contextinit/README.md)
+SpringContext.refresh(): 容器创建并刷新
 
+1. prepareRefresh(): context刷新前的预处理
+1. obtainFreshBeanFactory(): 获取BeanFactory
+1. prepareBeanFactory():  beanFactory 的预准备工作   
+1. postProcessBeanFactory(): beanFactory 准备完成后, 进行的后置处理工作
+1. invokeBeanFactoryPostProcessors(): 实例化并执行所有BeanFactoryPostProcessor  
+1. registerBeanPostProcessors(): 注册BeanPostProcessor(bean初始化前后执行)
+1. initMessageSource(): 初始化MessageSource组件(国际化功能, 消息绑定等)
+1. initApplicationEventMulticaster(): 初始化事件派发器  
+1. onRefresh(): 初始化其他特殊的bean
+1. registerListeners(): 将容器中所有Listener交给ApplicationEventMulticaster
+1. finishBeanFactoryInitialization(): 初始化所有剩下的单实例bean
+1. finishRefresh(): 刷新完成后的操作
+1. resetCommonCaches(): 重置一下缓存资源
 
 ## web
 ### servlet3.0

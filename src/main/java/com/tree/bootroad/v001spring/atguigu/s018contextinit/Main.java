@@ -3,7 +3,6 @@ package com.tree.bootroad.v001spring.atguigu.s018contextinit;
 import com.tree.bootroad.v001spring.atguigu.s018contextinit.config.Config;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationEvent;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @Slf4j
@@ -15,7 +14,6 @@ public class Main {
         System.out.println("context完成");
 //        printBeans(context);
 
-        context.publishEvent(new ApplicationEvent("tree"){});
 
         ((AnnotationConfigApplicationContext) context).close();
     }

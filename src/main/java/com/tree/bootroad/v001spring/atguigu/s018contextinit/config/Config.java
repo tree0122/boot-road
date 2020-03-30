@@ -4,7 +4,6 @@ import com.tree.bootroad.v001spring.atguigu.s018contextinit.bean.Blue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @Configuration
