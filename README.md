@@ -5,7 +5,7 @@
 ## 容器
 ### 容器(ApplicationContext)
 
-### [组件添加]((./src/main/java/com/tree/bootroad/v001spring/atguigu/s009factorybean/README.md))
+### [组件添加](./src/main/java/com/tree/bootroad/v001spring/atguigu/s009factorybean/README.md)
 1. @ComponentScan + @Component: 自己的类
 1. @Configuration + @Bean: 第三方包里的组件
 1. @Import: 快速给容器导入一个组件
