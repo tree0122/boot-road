@@ -1,15 +1,18 @@
-<link rel="stylesheet" type="text/css" href="./auto-number-title.css" />
+### 组件添加
 
-# Spring注解驱动开发
-
-## 容器
-### 容器(ApplicationContext)
-
-### [组件添加]((./src/main/java/com/tree/bootroad/v001spring/atguigu/s009factorybean/README.md))
 1. @ComponentScan + @Component: 自己的类
+    1. @Component
+    1. @Repository 
+    1. @Service 
+    1. @Controller
 1. @Configuration + @Bean: 第三方包里的组件
 1. @Import: 快速给容器导入一个组件
+    1. @Import(要导入的组件): id是组件的全类名
+    1. @ImportSelector: 返回需要的组件全类名数组
+    1. @ImportBeanDefinitionRegistrar: 手动注册bean到容器
 1. FactoryBean(工厂Bean)
+    1. 默认获取的是FactoryBean.getObject()创建的对象
+    1. 要获取FactoryBean, 需在id前加&(eg: &factoryBean)
 
 ### Bean生命周期
 生命周期: bean创建 -> 初始化 -> 使用 -> 销毁的过程 (容器管理bean的声明周期)
