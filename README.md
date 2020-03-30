@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="./auto-number-title.css" />
-
 # Spring注解驱动开发
 
 ## 容器
@@ -85,7 +83,7 @@
 1. 给方法上标注@Transactional, 表示此方法是一个事务方法
 1. @EnableTransactionManagement: 开启基于注解的事务
 1. 配置事务管理器 PlatformTransactionManager
-***
+
 
 ## 扩展原理
 
@@ -120,7 +118,7 @@
 
 
 ### Spring容器创建过程
-***
+
 
 ## web
 ### servlet3.0
