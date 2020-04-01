@@ -2,7 +2,7 @@
 
 启动流程: 
 1. ### 创建 SpringApplication 对象
-    ```
+    ```java
     public SpringApplication(ResourceLoader resourceLoader, Class<?>... primarySources) {
         this.resourceLoader = resourceLoader;
         Assert.notNull(primarySources, "PrimarySources must not be null");
