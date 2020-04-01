@@ -4,57 +4,59 @@
 ### 容器(ApplicationContext)
 
 1. ### [组件添加](./src/main/java/com/tree/bootroad/v001spring/atguigu/s009factorybean/README.md)
-    1. @ComponentScan + @Component: 自己的类
-    1. @Configuration + @Bean: 第三方包里的组件
-    1. @Import: 快速给容器导入一个组件
-    1. FactoryBean(工厂Bean)
+    - 用法:
+        1. @ComponentScan + @Component: 自己的类
+        1. @Configuration + @Bean: 第三方包里的组件
+        1. @Import: 快速给容器导入一个组件
+        1. FactoryBean(工厂Bean)
 
 1. ### [Bean生命周期](./src/main/java/com/tree/bootroad/v001spring/atguigu/s010beanlife/README.md)
     生命周期: bean创建 -> 初始化 -> 使用 -> 销毁的过程 (容器管理bean的声明周期)
-    
-    1. bean的创建(bean的构造方法, 反射实现)
-    1. 属性赋值
-    1. 初始化: bean构造方法后, 并对属性赋值, 然后调用初始化方法
-    1. 销毁: 
+    - 用法:
+        1. bean的创建(bean的构造方法, 反射实现)
+        1. 属性赋值
+        1. 初始化: bean构造方法后, 并对属性赋值, 然后调用初始化方法
+        1. 销毁: 
 
 1. ### [组件赋值](./src/main/java/com/tree/bootroad/v001spring/atguigu/s011value/README.md)
-    1. @Value
+    - @Value
         - 基本数值
         - SpEL: #{}
         - ${}: 环境变量中的值
     
-    1. note: @PropertySource读取外部配置文件(不读取yml)    
+    - note: @PropertySource读取外部配置文件(不读取yml)    
 
 1. ### [组件注入](./src/main/java/com/tree/bootroad/v001spring/atguigu/s012di/README.md)
     自动装配: 利用DI, 完成对容器中各组件的依赖关系赋值
-    
-    1. @Autowired: 自动注入
-        - 默认优先按类型注入
-        - 如果有多个同类型组件, 再按id注入
-        - @Qualifier指定装配的组件id
-        - 自动装配默认默认属性, 否则报错. @Autowired(required=false)可解决
-        - @Primary: 装配时默认首先bean
-    1. @Resource: 和@Autowired类似
-        - 默认按属性名注入
-        - 不支持@Primary和@Autowired(required=false)
-    1. @Inject: 和@Autowired类似
-    1. AutowiredAnnotationBeanPostProcessor 实现这些注解注入
-    1. @Autowired使用范围: 构造方法, 属性, 方法, 参数. 从容器中获取
-        - 方法: 创建当前对象时, 调用该方法完成赋值
-        - 构造器: 仅有一个构造器, 则@Autowired可省
-        - 参数
-    1. @Bean标记的方法, 方法参数为自动注入
-    1. 需要容器底层的Aware组件(ApplicationContext), 实现对应的Aware接口
-        - ApplicationContextAwareProcessor, 实现ApplicationContext相关
-        - Bean初始化中invokeAwareMethods(), 实现BeanFactoryAware相关
+    - 用法:
+        1. @Autowired: 自动注入
+            - 默认优先按类型注入
+            - 如果有多个同类型组件, 再按id注入
+            - @Qualifier指定装配的组件id
+            - 自动装配默认默认属性, 否则报错. @Autowired(required=false)可解决
+            - @Primary: 装配时默认首先bean
+        1. @Resource: 和@Autowired类似
+            - 默认按属性名注入
+            - 不支持@Primary和@Autowired(required=false)
+        1. @Inject: 和@Autowired类似
+        1. AutowiredAnnotationBeanPostProcessor 实现这些注解注入
+        1. @Autowired使用范围: 构造方法, 属性, 方法, 参数. 从容器中获取
+            - 方法: 创建当前对象时, 调用该方法完成赋值
+            - 构造器: 仅有一个构造器, 则@Autowired可省
+            - 参数
+        1. @Bean标记的方法, 方法参数为自动注入
+        1. 需要容器底层的Aware组件(ApplicationContext), 实现对应的Aware接口
+            - ApplicationContextAwareProcessor, 实现ApplicationContext相关
+            - Bean初始化中invokeAwareMethods(), 实现BeanFactoryAware相关
 
 1. ### [Profile](./src/main/java/com/tree/bootroad/v001spring/atguigu/s013profile/README.md)
      @Profile: 写在配置类上, 仅指定的环境时, 整个配置类里的所有bean才生效
-     1. Spring根据当前环境, 动态的激活和切换一系列组件
-     1. 指定组件在哪个环境下能注册到容器; 不指定, 任何环境下都能注册到容器
-        - 加了环境标示的bean, 只有这个环境下能被注册到容器. 默认为default
-        - vm参数(-Dspring.profiles.active=dev), 可命令行指定环境标识
-        - 代码的方式, context创建时指定其环境标识
+     - 用法:
+         1. Spring根据当前环境, 动态的激活和切换一系列组件
+         1. 指定组件在哪个环境下能注册到容器; 不指定, 任何环境下都能注册到容器
+            - 加了环境标示的bean, 只有这个环境下能被注册到容器. 默认为default
+            - vm参数(-Dspring.profiles.active=dev), 可命令行指定环境标识
+            - 代码的方式, context创建时指定其环境标识
 
 1. ### [AOP](./src/main/java/com/tree/bootroad/v001spring/atguigu/s014aop/EXPLAIN.md)
     - 使用步骤:
