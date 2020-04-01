@@ -1,4 +1,4 @@
-# SpringMVC
+# [SpringMVC](./EXPLAIN.md)
 
 ### 使用步骤:
 1. @Controller: 标记组件为控制器
@@ -47,6 +47,7 @@
     - 实例化并配置 HiddenHttpMethodFilter       
     - 发送POST请求
     - form携带隐藏域: name = "_method", value = "DELETE / PUT" 
+1. @InitBinder: BinderData的绑定    
 
 ### 标准HTTP请求报头:
 1. 请求行: 请求方法(POST GET) + 请求URI + HTTP协议及版本(HTTP/1.1)
