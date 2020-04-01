@@ -1,7 +1,7 @@
 # SpringBoot
 
 启动流程: 
-1. ### 创建 SpringApplication 对象
+1. **创建 SpringApplication**
     ```java
     public SpringApplication(ResourceLoader resourceLoader, Class<?>... primarySources) {
         this.resourceLoader = resourceLoader;
