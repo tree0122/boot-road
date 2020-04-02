@@ -101,6 +101,12 @@
             <version>0.9.5.5</version>
         </dependency>
 
+        <!-- custom starter -->
+        <dependency>
+            <groupId>com.tree.starter</groupId>
+            <artifactId>tree-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
 

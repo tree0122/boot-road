@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 //@MapperScan("com.tree.bootroad.x014mybatis.dao")
 //@ComponentScan("com.tree.bootroad.v002springmvc")
-@ComponentScan("com.tree.bootroad.x010web")
+@ComponentScan("com.tree.bootroad.v004springboot")
 @SpringBootApplication
 public class BootRoadApplication {
 

@@ -34,3 +34,8 @@ logging:
         web: info
       hibernate: debug
 
+tree:
+  hello:
+    prefix: welcome
+    suffix: good
+
