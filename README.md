@@ -22,7 +22,7 @@
 
 1. ### [SpringBoot](./src/main/java/com/tree/bootroad/README.md)
 
-1. ### [MyBatis](./src/main/java/com/tree/bootroad/README.md)
+1. [**MyBatis**](./src/main/java/com/tree/bootroad/README.md)  
     分层:      
     - 接口层(广义接口, 增删改查, 配置环境)
     - 数据处理层
@@ -36,3 +36,17 @@
         - 连接迟管理
         - 其他赋值
     - 引导层(XML配置 注解方式)
+    
+1. [**设计模式与原则**](./src/main/java/com/tree/bootroad/v005designpattern/README.md)  
+    **七大设计原则:**
+    - 单一职责
+    - 接口隔离
+    - 依赖倒置
+    - 里氏替换
+    - 开闭原则(ocp)
+    - 迪米特法则
+    - 合成复用   
+    **设计模式:**  
+    - 构建型    
+    - 结构型    
+    - 状态型        
