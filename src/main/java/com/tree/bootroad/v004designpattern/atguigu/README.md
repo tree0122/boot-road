@@ -50,13 +50,13 @@
 
 ### 23种设计模式  
 创建型:
-1. [单例](./design/d01singleton/README.md)   
+1. [singleton(单例)](./design/d01singleton/README.md)   
     - 设计层面, 采取一定的方法保证整个系统中, 对某个类只存在一个对象实例
     - 该类只提供一个取得其对象实例的方法
-1. Factory(简单工厂/工厂方法)  
-1. AbstractFactory(抽象工厂)  
-1. 原型 
-1. 建造者 
+1. [Factory(简单工厂/工厂方法)](./design/d02factory/README.md)    
+1. [AbstractFactory(抽象工厂)](./design/d03abstractfactory/README.md)    
+1. [prototype(原型)](./design/d04prototype/README.md)   
+1. [builder(建造者)](./design/d05builder/README.md)   
  
 结构型:
 1. 适配器
