@@ -1,4 +1,4 @@
-package com.tree.bootroad.v005designpattern.r01singleresponsibility;
+package com.tree.bootroad.v004designpattern.atguigu.principle.p01singleresponsibility;
 
 public class SingleResponsibility1 {
 

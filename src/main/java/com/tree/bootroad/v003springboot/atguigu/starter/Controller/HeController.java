@@ -1,4 +1,4 @@
-package com.tree.bootroad.v004springboot.atguigu.starter.Controller;
+package com.tree.bootroad.v003springboot.atguigu.starter.Controller;
 
 import com.tree.starter.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;

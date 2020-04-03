@@ -1,4 +1,4 @@
-package com.tree.bootroad.v005designpattern.r01singleresponsibility;
+package com.tree.bootroad.v004designpattern.atguigu.principle.p01singleresponsibility;
 
 /**
  * 方法级别的单一职责

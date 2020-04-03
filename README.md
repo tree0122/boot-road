@@ -37,7 +37,7 @@
         - 其他赋值
     - 引导层(XML配置 注解方式)
     
-1. [**设计模式与原则**](./src/main/java/com/tree/bootroad/v005designpattern/README.md)  
+1. [**设计模式与原则**](src/main/java/com/tree/bootroad/v004designpattern/atguigu/README.md)  
     **七大设计原则:**
     - 单一职责
     - 接口隔离
