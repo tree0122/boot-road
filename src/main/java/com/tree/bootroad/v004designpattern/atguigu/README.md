@@ -53,7 +53,7 @@
 1. [单例](./design/d01singleton/README.md)   
     - 设计层面, 采取一定的方法保证整个系统中, 对某个类只存在一个对象实例
     - 该类只提供一个取得其对象实例的方法
-1. Factory(工厂)  
+1. Factory(简单工厂/工厂方法)  
 1. AbstractFactory(抽象工厂)  
 1. 原型 
 1. 建造者 
