@@ -1,15 +1,13 @@
 package com.tree.bootroad.v004designpattern.atguigu.design.d05builder.sample;
 
-import com.tree.bootroad.v004designpattern.atguigu.design.d05builder.sample.prototype.Sheep;
+import com.tree.bootroad.v004designpattern.atguigu.design.d05builder.sample.builder.CommonHouse;
+import com.tree.bootroad.v004designpattern.atguigu.design.d05builder.sample.builder.Director;
 
 public class Stage {
 
     public static void main(String[] args) {
-        Sheep sheep = new Sheep(1, "tome", "white");
-
-        for (int i = 0; i < 5; i++) {
-            Sheep clone = sheep.clone();
-            System.out.println(clone.hashCode() + " --- " + clone);
-        }
+        Director director = new Director(new CommonHouse());
+        director.build();
     }
+
 }
