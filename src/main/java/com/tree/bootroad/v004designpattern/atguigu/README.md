@@ -63,8 +63,8 @@
 1. [bridge(桥接)](./design/d07bridge/README.md) 
 1. [decorator(装饰)](./design/d08decorator/README.md) 
 1. [composite(组合)](./design/d09composite/README.md) 
-1. [facade(外观)](./design/d09facade/README.md) 
-1. 享元
+1. [facade(外观)](./design/d10facade/README.md) 
+1. [flyweight(享元)](./design/d11flyweight/README.md) 
 1. 代理
  
 行为型:
