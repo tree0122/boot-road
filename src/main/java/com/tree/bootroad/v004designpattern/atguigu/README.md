@@ -69,7 +69,7 @@
  
 行为型:
 1. [template(模板)](./design/d13template/README.md) 
-1. 命令
+1. [command(命令)](./design/d14command/README.md) 
 1. 访问者
 1. 迭代器
 1. 观察者
