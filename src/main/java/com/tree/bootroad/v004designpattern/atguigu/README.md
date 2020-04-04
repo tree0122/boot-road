@@ -65,7 +65,7 @@
 1. [composite(组合)](./design/d09composite/README.md) 
 1. [facade(外观)](./design/d10facade/README.md) 
 1. [flyweight(享元)](./design/d11flyweight/README.md) 
-1. 代理
+1. [proxy(代理)](./design/d12proxy/README.md) 
  
 行为型:
 1. 模板方法
