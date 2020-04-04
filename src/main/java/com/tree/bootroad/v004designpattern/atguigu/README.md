@@ -59,8 +59,8 @@
 1. [builder(建造者)](./design/d05builder/README.md)   
  
 结构型:
-1. 适配器
-1. 桥接
+1. [adapter(适配器)](./design/d06adapter/README.md) 
+1. [bridge(桥接)](./design/d07bridge/README.md) 
 1. 装饰
 1. 组合
 1. 外观
