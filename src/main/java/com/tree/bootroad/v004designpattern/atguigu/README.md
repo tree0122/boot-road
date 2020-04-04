@@ -68,7 +68,7 @@
 1. [proxy(代理)](./design/d12proxy/README.md) 
  
 行为型:
-1. 模板方法
+1. [template(模板)](./design/d13template/README.md) 
 1. 命令
 1. 访问者
 1. 迭代器
