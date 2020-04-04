@@ -61,7 +61,7 @@
 结构型:
 1. [adapter(适配器)](./design/d06adapter/README.md) 
 1. [bridge(桥接)](./design/d07bridge/README.md) 
-1. 装饰
+1. [decorator(装饰)](./design/d08decorator/README.md) 
 1. 组合
 1. 外观
 1. 享元
