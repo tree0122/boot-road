@@ -73,7 +73,7 @@
 1. [visitor(访问者)](./design/d15visitor/README.md) 
 1. [iterator(迭代器)](./design/d16iterator/README.md) 
 1. [observer(观察者)](./design/d17observer/README.md) 
-1. 中介者
+1. [mediator(中介者)](./design/d18mediator/README.md) 
 1. 备忘录
 1. 解释器
 1. 状态
