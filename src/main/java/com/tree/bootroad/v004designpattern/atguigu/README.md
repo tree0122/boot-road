@@ -72,7 +72,7 @@
 1. [command(命令)](./design/d14command/README.md) 
 1. [visitor(访问者)](./design/d15visitor/README.md) 
 1. [iterator(迭代器)](./design/d16iterator/README.md) 
-1. 观察者
+1. [observer(观察者)](./design/d17observer/README.md) 
 1. 中介者
 1. 备忘录
 1. 解释器
