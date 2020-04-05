@@ -71,7 +71,7 @@
 1. [template(模板)](./design/d13template/README.md) 
 1. [command(命令)](./design/d14command/README.md) 
 1. [visitor(访问者)](./design/d15visitor/README.md) 
-1. 迭代器
+1. [iterator(迭代器)](./design/d16iterator/README.md) 
 1. 观察者
 1. 中介者
 1. 备忘录
