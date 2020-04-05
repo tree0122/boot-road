@@ -76,6 +76,6 @@
 1. [mediator(中介者)](./design/d18mediator/README.md) 
 1. [memento(备忘录)](./design/d19memento/README.md) 
 1. [interpreter(解释器)](./design/d20interpreter/README.md) 
-1. 状态
+1. [state(状态)](./design/d21state/README.md) 
 1. 策略
 1. 责任链
