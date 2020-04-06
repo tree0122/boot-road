@@ -77,5 +77,5 @@
 1. [memento(备忘录)](./design/d19memento/README.md) 
 1. [interpreter(解释器)](./design/d20interpreter/README.md) 
 1. [state(状态)](./design/d21state/README.md) 
-1. 策略
+1. [strategy(策略)](./design/d22strategy/README.md) 
 1. 责任链
