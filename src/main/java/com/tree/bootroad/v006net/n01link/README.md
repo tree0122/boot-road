@@ -8,6 +8,7 @@
    - [上层的服务类型](#上层的服务类型)
    - [基本概念](#基本概念)
    - [实现机制](#实现机制)
+4. [MAC与IP](#MAC与IP)
 
 ### 封装成帧
 
@@ -56,3 +57,15 @@
    ![回退N帧](../../../../../../resources/imgs/0006-go-back-n.png)
 
 3. 选择重传协议SR	
+
+ ![选择重传](../../../../../../resources/imgs/0007-selective-request.png)
+
+### MAC与IP
+
+- MAC、IP在网络中路由时的变化过程
+
+  ![mac-ip的相应变化](../../../../../../resources/imgs/0008-mac-ip.png)
+
+- ARP协议：单个网络中，通过IP获取对应MAC
+
+  ![mac-ip-arp](../../../../../../resources/imgs/0009-mac-ip-arp.png)
