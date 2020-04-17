@@ -3,13 +3,9 @@
 ## 网络分层
 
 - TCP/IP体系结构（4层，事实标准）
-
   1. 物理链路层
-
   2. 网络层
-
   3. 传输层
-
   4. 应用层
   
 - OSI体系结构（7层，法律标准）
@@ -22,19 +18,14 @@
   7. 应用层
   
 - 原理体系结构（5层，便于学习）
-
   1. 物理层
-
   2. 数据链路层
-
   3. 网络层
-
   4. 传输层
-
   5. 应用层
 
   
-  ![net-layer](../../../../../resources/imgs/0001-net-layer.png)
+![net-layer](./../../../../../resources/imgs/0001-net-layer.png)
 
 ## 物理层
 
@@ -68,6 +59,7 @@
 ### 协议
 
 1. IP
+2. ICMP
 
 ## 传输层
 
@@ -94,8 +86,14 @@
 ### 协议
 
 1. HTTP
-2. SMTP
-3. DNS
-4. RTP
+2. HTTPS
+3. FTP
+4. BGP
+5. SMTP
+6. DNS
+7. RTP
+8. TFTP
+9. SNMP
+10. DHCP
 
-![net-layer](../../../../../resources/imgs/0002-net-layer-func.png)
+![net-layer](./../../../../../resources/imgs/0002-net-layer-func.png)
